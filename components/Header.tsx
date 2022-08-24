@@ -15,21 +15,22 @@ export function Header() {
       <nav
         class={tw`w-11/12 h-24 max-w-5xl mx-auto flex items-center justify-between relative`}
       >
-        <a href="/">
+        {/* <a href="/">
           <img
             src="/logo.svg"
             alt="Deno Logo"
             class={tw`h-14 w-14`}
           />
-        </a>
+        </a> */}
         <h1>
-          <img
+          {/* <img
             src="/text_logo.svg"
             alt="Deno Merch"
             class={tw`h-6`}
             width="130"
             height="24"
-          />
+          /> */}
+          <b style="font-size: 40px">Mainline Music</b>
         </h1>
         <Cart />
       </nav>
