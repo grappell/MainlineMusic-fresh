@@ -8,12 +8,17 @@ export function Footer() {
       class={tw`w-11/12 max-w-5xl mx-auto mt-24 sm:!mt-28 mb-8 flex items-center justify-between`}
     >
       <span class={tw`flex items-center gap-4 `}>
+          <div
+          class={tw`flex items-center gap-2 text-gray-700`}
+          href="https://fresh.deno.dev"
+        >
           <img
             src="/fresh_logo.svg"
             alt="Fresh Logo"
             class={tw`h-7 w-7`}
           />
-          Built with<strong style="padding-left: 0;">Fresh</strong>
+          Built with <strong>Fresh</strong>
+        </div>
       </span>
       <div
         class={tw`text-sm text-gray-400 hidden items-center gap-2 sm:!flex`}
