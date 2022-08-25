@@ -8,7 +8,8 @@ export function Header() {
     <header
       class={tw`h-[110px] sm:!h-[144px] w-full bg-cover bg-no-repeat relative`}
       style={{
-        backgroundImage: "url(/header_bg.svg)",
+        backgroundImage: "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP7hno5IXTKTOK3gMlH1WRAptrhjRtF5KOuW1tQ7ubwoPNZvoFim4mEerxq_tHzUBDjl0&usqp=CAU')",
+        
       }}
     >
       <div class={`rainfall ${tw`w-full h-full absolute`}`} />

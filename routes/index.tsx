@@ -71,7 +71,7 @@ export default function Home(ctx: PageProps<Data>) {
           {products.map((product) => <ProductCard product={product} />)}
         </div>
       </div>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }
