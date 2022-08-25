@@ -68,6 +68,7 @@ export default function ProductPage(ctx: PageProps<Query>) {
     return <div>Product not found</div>;
   }
 
+
   return (
     <>
       <HeadElement

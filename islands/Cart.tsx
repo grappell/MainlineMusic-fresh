@@ -9,8 +9,10 @@ import {
   CartData,
   formatCurrency,
   removeFromCart,
+  addToCart,
   useCart,
 } from "@/utils/data.ts";
+
 
 // Lazy load a <dialog> polyfill.
 // @ts-expect-error HTMLDialogElement is not just a type!
@@ -97,6 +99,15 @@ function CartInner(props: { cart: CartData | undefined }) {
     }
   };
 
+  const add = (itemId: string) => {
+    if (cart) {
+      console.log(cart.id, itemId)
+      addToCart(cart.id, "gid://shopify/ProductVariant/43157491056890");
+    }
+  };
+
+  // console.log(props.cart)
+
   return (
     <div class={card}>
       <div class={tw`flex justify-between`}>
@@ -156,8 +167,8 @@ function CartInner(props: { cart: CartData | undefined }) {
                       >
                         <p class={tw`text-gray-500`}>
                           Quantity <strong>{line.quantity}</strong>
+                          {/* <span><p style="background-color: lightgray; border-radius: 100px"><span style="padding:0 20px; font-weight: 900; font-size: x-large; width: 1000px;" onClick={() => add(line.id)}>+</span><span style="padding: 0px; font-weight: 100; font-size: 23px">|</span><span style="padding:0 20px; font-weight: 900; font-size: x-large; ">-</span></p></span> */}
                         </p>
-
                         <div class={tw`flex`}>
                           <button
                             type="button"

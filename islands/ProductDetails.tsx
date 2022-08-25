@@ -18,6 +18,7 @@ const descriptionStyles = css({
 });
 
 export default function ProductDetails({ product }: { product: Product }) {
+
   const [variant, setVariant] = useState(product.variants.nodes[0]);
   let index = 0;
 

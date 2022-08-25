@@ -16,6 +16,7 @@ export default function AddToCart(props: AddToCartProps) {
     e.preventDefault();
     setIsAdding(true);
     addToCart(data!.id, props.id).finally(() => {
+      alert("Product Added To Cart")
       setIsAdding(false);
     });
   };
