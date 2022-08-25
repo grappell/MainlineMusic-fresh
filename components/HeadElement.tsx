@@ -13,7 +13,7 @@ export function HeadElement({ description, image, title, url }: HeadProps) {
   return (
     <Head>
       <title>{title}</title>
-      <link rel="icon" href="/favicon.ico" sizes="32x32" />
+      <link rel="icon" style="border-radius: 100px" href="https://cdn0.iconfinder.com/data/icons/symbols-add-on-2-vol-1/48/v-33-512.png" sizes="32x32" />
       <meta name="description" content={description} />
 
       {/* Facebook Meta Tags */}
