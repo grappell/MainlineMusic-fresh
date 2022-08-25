@@ -13,7 +13,7 @@ export function Footer() {
             alt="Fresh Logo"
             class={tw`h-7 w-7`}
           />
-          Built with <strong style="padding-left: 0;">| Fresh</strong>
+          Built with<strong style="padding-left: 0;">| Fresh</strong>
       </span>
       <div
         class={tw`text-sm text-gray-400 hidden items-center gap-2 sm:!flex`}
