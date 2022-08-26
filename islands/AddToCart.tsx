@@ -18,9 +18,9 @@ export default function AddToCart(props: AddToCartProps) {
     setIsAdding(true);
     addToCart(data!.id, props.id).finally(() => {
       if(props.title.match("Default Title")){
-        alert("Product Added To Cart")
+        alert("Product added to cart")
       } else {
-        alert("Product Added To Cart With Color: " + props.title)
+        alert("Product variant added to cart: " + props.title)
       }
       setIsAdding(false);
     });
