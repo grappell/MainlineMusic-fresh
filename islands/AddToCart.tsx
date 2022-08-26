@@ -20,7 +20,7 @@ export default function AddToCart(props: AddToCartProps) {
       if(props.title.match("Default Title")){
         alert("Product added to cart")
       } else {
-        alert("Product variant added to cart: " + props.title)
+        alert("Product added to cart. Variant of the product: " + props.title)
       }
       setIsAdding(false);
     });
