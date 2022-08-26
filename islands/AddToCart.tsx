@@ -6,6 +6,7 @@ import { addToCart, useCart } from "@/utils/data.ts";
 
 interface AddToCartProps {
   id: string;
+  title: string;
 }
 
 export default function AddToCart(props: AddToCartProps) {
@@ -16,7 +17,11 @@ export default function AddToCart(props: AddToCartProps) {
     e.preventDefault();
     setIsAdding(true);
     addToCart(data!.id, props.id).finally(() => {
-      alert("Product Added To Cart")
+      if(props.title.match("Default Title")){
+        alert("Product Added To Cart")
+      } else {
+        alert("Product Added To Cart With Color: " + props.title)
+      }
       setIsAdding(false);
     });
   };

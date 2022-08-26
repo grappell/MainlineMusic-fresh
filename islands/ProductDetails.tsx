@@ -239,7 +239,7 @@ export default function ProductDetails({ product }: { product: Product }) {
           )}
           {variant.availableForSale && (
             <div class={tw`mt-4`}>
-              <AddToCart id={variant.id} />
+              <AddToCart id={variant.id} title={variant.title}/>
             </div>
           )}
         </section>
