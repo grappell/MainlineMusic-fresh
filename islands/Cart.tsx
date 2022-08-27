@@ -61,10 +61,10 @@ export default function Cart() {
   }
 
   return (
-    <div>
+    <div style="color: white">
       <button
         onClick={() => ref.current!.showModal()}
-        class={tw`flex items-center gap-2 items-center border-2 border-gray-800 rounded-full px-5 py-1 font-semibold text-gray-800 hover:bg-gray-800 hover:text-white transition-colors duration-300`}
+        class={tw`flex items-center gap-2 items-center border-2 border-white-800 rounded-full px-5 py-1 font-semibold text-white hover:bg-gray-400 hover:text-white transition-colors duration-300`}
       >
         <IconCart />
         {data?.lines.nodes.length ?? "0"}

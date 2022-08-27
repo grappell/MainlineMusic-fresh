@@ -6,6 +6,7 @@ export function Footer() {
   return (
     <footer
       class={tw`w-11/12 max-w-5xl mx-auto mt-24 sm:!mt-28 mb-8 flex items-center justify-between`}
+      style="color: white"
     >
       <span class={tw`flex items-center gap-4 `}>
           <div
