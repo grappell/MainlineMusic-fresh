@@ -97,20 +97,19 @@ function ProductCard(props: { product: Product }) {
         <div
           class={tw`w-full h-full flex items-center justify-center bg-[rgba(83,45,46,0.8)] opacity-0 group-hover:opacity-100 transition-all duration-500`}
         >
-          <IconCart size={30} />
+          <IconCart size={40} />
         </div>
       </div>
       <div class={tw`flex items-center justify-between mt-3`}>
-        <h3 class={tw`text-lg font-medium relative`} style="color: white">
+        <h3 class={tw`text-lg  font-medium relative`}>
           {product.title}
           <span
-            class={tw`h-[3px] w-0 group-hover:!w-full absolute bottom-[-2px] left-0 transition-all duration-400`} style="color: white"
+            class={tw`bg-gray-300 h-[3px] w-0 group-hover:!w-full absolute bottom-[-2px] left-0 transition-all duration-400`}
           />
         </h3>
-        <strong class={tw`text-lg font-bold text-white`}>
+        <strong class={tw`text-lg font-bold `}>
           {formatCurrency(product.priceRange.minVariantPrice)}
         </strong>
-      </div>
-    </a>
+      </div>    </a>
   );
 }

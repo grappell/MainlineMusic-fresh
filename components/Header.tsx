@@ -17,7 +17,7 @@ export function Header() {
       <nav
         class={tw`w-11/12 h-24 max-w-5xl mx-auto flex items-center justify-between relative`}
       >
-        <a href="/" class="logo">
+        <a href="/" class="logo" draggable="false">
           <img id="logo"
             src="https://images.squarespace-cdn.com/content/v1/5876c469bebafbb7789d15a3/1610846625882-RVHUH7SV0BWY0WMIKBZM/Sugaray+rayford+Logo+White.png?format=1000w"
             alt="Deno Logo"
