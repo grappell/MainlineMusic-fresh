@@ -7,3 +7,13 @@ body {
   background-image: url("/raindrops-animate.svg");
 }
 
+.logo{
+  display: none;
+  
+/*   
+  @media only screen and (max-width: 600px) {
+    #logo{
+      display: none; background-color: red;
+    }
+  } */
+}
