@@ -83,14 +83,14 @@ function ProductCard(props: { product: Product }) {
       <div
         class={tw`${
           aspectRatio(1, 1)
-        } w-full bg-white rounded-xl overflow-hidden border-2 border-gray-200 transition-all duration-500 relative`}      >
+        } w-full rounded-xl overflow-hidden border-2 border-gray-600 transition-all duration-500 relative`}      >
         {product.featuredImage && (
           <img
             src={product.featuredImage.url}
             alt={product.featuredImage.altText}
             width="400"
             height="400"
-            class={tw`w-full h-full object-center object-contain absolute block`}
+            class={tw`w-full h-full object-center object-cover absolute block`}
 
           />
         )}

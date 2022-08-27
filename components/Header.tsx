@@ -32,7 +32,7 @@ export function Header() {
             width="130"
             height="24"
           /> */}
-          <b style="font-size: 40px">SUGARAY RAYFORD</b>
+          <b style="font-size: 32px;">SUGARAY RAYFORD</b>
         </h1>
         <Cart />
       </nav>
