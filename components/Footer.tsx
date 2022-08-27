@@ -2,15 +2,19 @@
 import { h } from "preact";
 import { tw } from "@twind";
 
+
+// todo on all other pages: SET THE BACKGROUND COLOR TO THE DARK VERSION
+
 export function Footer() {
   return (
     <footer
       class={tw`w-11/12 max-w-5xl mx-auto mt-24 sm:!mt-28 mb-8 flex items-center justify-between`}
-      style="color: white; padding-bottom: 0px !important; margin-bottom: 0px !important; margin-top: 20px !important;"
+      style="color: white;"
+      id="footer"
     >
       <span class={tw`flex items-center gap-4 `}>
           <div
-          class={tw`flex items-center gap-2 text-gray-700`}
+          class={tw`flex items-center gap-2 text-gray-600`}
           href="https://fresh.deno.dev"
         >
           <img
@@ -22,7 +26,7 @@ export function Footer() {
         </div>
       </span>
       <div
-        class={tw`text-sm text-gray-400 hidden items-center gap-2 sm:!flex`}
+        class={tw`text-sm text-gray-500 hidden items-center gap-2 sm:!flex`}
       >
         Powered by
         <svg

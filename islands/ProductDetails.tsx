@@ -63,10 +63,10 @@ export default function ProductDetails({ product }: { product: Product }) {
         >
           <div class={tw`w-full flex items-center justify-between gap-4`}>
             <hgroup>
-              <h2 class={tw`text-xl lg:!text-2xl font-semibold text-gray-800`}>
+              <h2 class={tw`text-xl lg:!text-2xl font-semibold text-gray-400`}>
                 {product.title}
               </h2>
-              <h3 class={tw`text-gray-500 text-base leading-tight`}>
+              <h3 class={tw`text-gray-400 text-base leading-tight`}>
                 {product.productType}
               </h3>
             </hgroup>
@@ -88,7 +88,7 @@ export default function ProductDetails({ product }: { product: Product }) {
 
           {!variant.availableForSale && (
             <div class={tw`flex items-center`}>
-              <p class={tw`text-base text-gray-500`}>
+              <p class={tw`text-base text-white`}>
                 Out of stock
               </p>
             </div>
@@ -96,7 +96,7 @@ export default function ProductDetails({ product }: { product: Product }) {
 
           <div class={tw`mt-4 space-y-6`}>
             <p
-              class={tw`text-base text-gray-600 ${descriptionStyles}`}
+              class={tw`text-base text-gray-400 ${descriptionStyles}`}
               dangerouslySetInnerHTML={{ __html: product.descriptionHtml }}
             />
           </div>
@@ -107,7 +107,7 @@ export default function ProductDetails({ product }: { product: Product }) {
       <div
         class={tw`${
           aspectRatio(1, 1)
-        } w-full bg-white rounded-xl border-2 border-gray-200 mt-12 lg:mt-0 lg:col-start-2 lg:row-span-2 lg:self-start`}
+        } w-full bg-white rounded-xl border-2 border-gray-800 mt-12 lg:mt-0 lg:col-start-2 lg:row-span-2 lg:self-start`}
       >
         <div class={tw`rounded-lg overflow-hidden`}>
           {product.featuredImage && (
@@ -117,25 +117,26 @@ export default function ProductDetails({ product }: { product: Product }) {
               alt={product.featuredImage.altText}
               width="400"
               height="400"
-              class={tw`w-full h-full object-center object-contain`}
+              class={tw`w-full h-full object-center object-cover`}
             />
           )}
 
           {(product?.images?.nodes?.length ?? 0) > 1 && (
             <div>
               <button
-                class={tw`absolute w-16 opacity-50 hover:opacity-100 top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0`}
+                class={tw`absolute w-8 rounded-sm opacity-50 hover:opacity-70 top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0`}
                 type="button"
                 onClick={() => {
                   changeImage(-1);
                 }}
+                style="background-color: #594545"
               >
-                <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gray-800/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
                   <svg
                     aria-hidden="true"
-                    class="w-6 h-6 text-gray-800 dark:text-gray-800"
+                    class="w-8 h-8 text-gray-800 dark:text-gray-800"
                     fill="none"
-                    stroke="currentColor"
+                    stroke="black"
                     viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg"
                   >
@@ -151,18 +152,19 @@ export default function ProductDetails({ product }: { product: Product }) {
                 </span>
               </button>
               <button
-                class={tw`absolute w-16 opacity-50 hover:opacity-100 top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline right-0`}
+                class={tw`absolute w-8 rounded-sm opacity-50 hover:opacity-70 top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline right-0`}
                 type="button"
                 onClick={() => {
                   changeImage(1);
-                }}
+                }}                
+                style="background-color:  #594545"
               >
                 <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
                   <svg
                     aria-hidden="true"
-                    class="w-6 h-6 text-gray-800 dark:text-gray-800"
+                    class="w-8 h-8 text-gray-800 dark:text-gray-800"
                     fill="none"
-                    stroke="currentColor"
+                    stroke="black"
                     viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg"
                   >
@@ -228,7 +230,7 @@ export default function ProductDetails({ product }: { product: Product }) {
                 >
                   {product.variants.nodes.map((variant) => {
                     return (
-                      <option value={JSON.stringify(variant)}>
+                      <option value={JSON.stringify(variant)} style="color: black">
                         {variant.title}
                       </option>
                     );

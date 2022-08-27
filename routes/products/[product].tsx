@@ -71,6 +71,7 @@ export default function ProductPage(ctx: PageProps<Query>) {
 
   return (
     <>
+      <div style="background-color: #1f1f1f; min-height: 100vh; color: white">
       <HeadElement
         description={data.product.description}
         image={data.product.featuredImage?.url}
@@ -103,6 +104,7 @@ export default function ProductPage(ctx: PageProps<Query>) {
       </div>
       <ProductDetails product={data.product!} />
       <Footer />
+      </div>
     </>
   );
 }
