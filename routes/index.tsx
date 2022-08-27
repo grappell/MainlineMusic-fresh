@@ -50,7 +50,7 @@ export default function Home(ctx: PageProps<Data>) {
   const { data, url } = ctx;
   const products = data.products.nodes;
   return (
-    <div style="min-height: 100vh; background-color: #1f1f1f; color: white; backdrop-filter: blur(10px)">
+    <div style="min-height: 100vh; background-color: #1f1f1f; color: white;">
       <HeadElement
         description="MainlineMusic Store"
         image={"https://images.squarespace-cdn.com/content/v1/5876c469bebafbb7789d15a3/1610846625882-RVHUH7SV0BWY0WMIKBZM/Sugaray+rayford+Logo+White.png?format=1000w"}
